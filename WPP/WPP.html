@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="WPP.css">
+    <title>Payroll System</title>
+</head>
+<body>
+    <div id="main-page" class="card">
+        <h1 class="title-h1">PAYROLL SYSTEM</h1>
+        <form id="payroll-form">
+            <div class="input-group">
+                <label for="idNumber" class="label-text">ID NUMBER</label>
+                <input type="text" id="idNumber" name="idNumber" class="input-field" required>
+            </div>
+            <div class="input-group">
+                <label for="lastName" class="label-text">LAST NAME</label>
+                <input type="text" id="lastName" name="lastName" class="input-field" required>
+            </div>
+            <div class="input-group">
+                <label for="firstName" class="label-text">FIRST NAME</label>
+                <input type="text" id="firstName" name="firstName" class="input-field" required>
+            </div>
+            <div class="input-group">
+                <label for="middleName" class="label-text">MIDDLE NAME</label>
+                <input type="text" id="middleName" name="middleName" class="input-field" required>
+            </div>
+            <div class="input-group">
+                <label for="position" class="label-text">POSITION</label>
+                <input type="text" id="position" name="position" class="input-field" required>
+            </div>
+            <div class="input-group">
+                <label for="ratePerDay" class="label-text">RATE</label>
+                <input type="number" id="ratePerDay" name="ratePerDay" class="input-field" required min="0">
+            </div>
+            <div class="input-group">
+                <label for="daysWorked" class="label-text">WORK DAYS</label>
+                <input type="number" id="daysWorked" name="daysWorked" class="input-field" required min="0">
+            </div>
+            <div class="button-container">
+                <button type="submit" class="submit-btn">SUBMIT TOTAL COMPUTATION</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="display-page" class="card hidden">
+        <h1 class="display-title">TOTAL PAYROLL</h1>
+        <div class="display-content">
+            <div class="display-row">
+                <span class="display-label">ID:</span>
+                <span id="output-id-number" class="display-value"></span>
+            </div>
+            <div class="display-row">
+                <span class="display-label">NAME:</span>
+                <span id="output-employee-name" class="display-value"></span>
+            </div>
+            <div class="display-row">
+                <span class="display-label">POSITION:</span>
+                <span id="output-position" class="display-value"></span>
+            </div>
+            <div class="display-row">
+                <span class="display-label">RATE:</span>
+                <span id="output-rate-per-day" class="display-value"></span>
+            </div>
+            <div class="display-row">
+                <span class="display-label">DAYS:</span>
+                <span id="output-days-worked" class="display-value"></span>
+            </div>
+            
+            <div class="display-row separator">
+                <span class="display-label">GROSS PAY:</span>
+                <span id="output-gross-pay" class="display-value"></span>
+            </div>
+            
+            <h2 class="deduction-title">DEDUCTIONS</h2>
+            
+            <div class="deduction-grid">
+                <span class="display-label">SSS(5%):</span>
+                <span id="output-sss" class="display-value"></span>
+                <span class="display-label">PAG-IBIG(3%):</span>
+                <span id="output-pagibig" class="display-value"></span>
+                <span class="display-label">PHILHEALTH(2%):</span>
+                <span id="output-philhealth" class="display-value"></span>
+                <span class="display-label">TAX(5%):</span>
+                <span id="output-tax" class="display-value"></span>
+            </div>
+            
+            <div class="display-row final-separator">
+                <span class="display-label text-xl">TOTAL DEDUCTION:</span>
+                <span id="output-total-deductions" class="display-value text-xl"></span>
+            </div>
+            
+            <div class="display-row final-separator" style="border-top-width: 2px;">
+                <span class="display-label text-2xl">NET PAY:</span>
+                <span id="output-net-pay" class="display-value text-2xl"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="WPP.js"></script>
+
+</body>
+</html>
